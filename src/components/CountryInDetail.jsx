@@ -18,6 +18,7 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
     timezones,
     callingCodes,
     independent,
+    regionalBlocs,
   } = country;
 
   return (
@@ -86,6 +87,7 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
                   languages,
                   timezones,
                   callingCodes,
+                  regionalBlocs,
                 ].map((item, i) => (
                   <p key={i} className="flex gap-1 flex-wrap">
                     <span className={"font-bold"}>
@@ -96,6 +98,7 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
                           "Languages",
                           "Timezones",
                           "Calling Codes",
+                          "Regional Blocs",
                         ][i]
                       }
                       :
