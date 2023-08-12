@@ -90,7 +90,7 @@ function App() {
                 data={data}
               />
             </div>
-            <div className={"flex flex-wrap gap-[60px] pb-16"}>
+            <div className={"flex flex-wrap gap-10 pb-16"}>
               {data
                 .slice()
                 .sort((a, b) => a.name.localeCompare(b.name))

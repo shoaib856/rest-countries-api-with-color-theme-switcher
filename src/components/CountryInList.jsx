@@ -4,13 +4,13 @@ const CountryInList = ({ country, setSelectedCountry, language }) => {
     <div
       onClick={() => setSelectedCountry(country)}
       className={
-        "cursor-pointer dark:bg-dark-blue dark:text-white rounded flex mx-auto w-52 bg-white shadow flex-col gap-3"
+        "cursor-pointer dark:bg-dark-blue dark:text-white rounded flex mx-auto w-72 bg-white shadow flex-col gap-3"
       }
     >
       <img
         src={country.flags.png}
         alt={country.name}
-        className={"rounded-t shadow-md h-32 w-full object-cover"}
+        className={"rounded-t shadow-md h-44 w-full object-contain"}
       />
       <div className={"flex flex-col gap-2 p-3"}>
         <h2
