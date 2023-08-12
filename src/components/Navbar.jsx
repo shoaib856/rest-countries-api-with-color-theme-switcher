@@ -21,11 +21,11 @@ const Navbar = ({ handleDarkMode, setLanguage }) => {
         "dark:bg-dark-blue dark:text-white sticky top-0 z-10 !w-full bg-white py-6"
       }
     >
-      <div className="container mx-auto max-sm:px-3 flex flex-wrap items-center justify-between">
+      <div className="container mx-auto max-sm:px-3 flex gap-3 flex-wrap items-center justify-between">
         <h1 className={"font-[800] text-lg tracking-wide"}>
           Where in the world?
         </h1>
-        <div className="flex gap-2">
+        <div className="flex gap-2 flex-wrap">
           <button
             onClick={handleDarkMode}
             className={"flex items-center gap-2"}
