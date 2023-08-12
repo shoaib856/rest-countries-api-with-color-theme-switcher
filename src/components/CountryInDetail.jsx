@@ -50,12 +50,12 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
         </div>
         <div className="max-sm:px-5 p-2 dark:text-white max-w-lg w-full">
           <h1
-            className={`text-2xl font-bold mb-10 ${
-              language === "fa" ? "text-right" : ""
+            className={`text-2xl flex gap-0.5 flex-wrap font-bold mb-10 ${
+              language === "fa" ? "flex-row-reverse" : ""
             }`}
           >
-            {country.translations[language] || name} (
-            {independent ? "Independent" : "Not Independent"})
+            <span>{country.translations[language] || name}</span>{" "}
+            <span>({independent ? "Independent" : "Not Independent"})</span>
           </h1>
           <div className="flex flex-col gap-10">
             <div className="flex max-md:flex-col gap-10">
