@@ -17,6 +17,7 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
     flags,
     timezones,
     callingCodes,
+    independent,
   } = country;
 
   return (
@@ -52,7 +53,8 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
               language === "fa" ? "text-right" : ""
             }`}
           >
-            {country.translations[language] || name}
+            {country.translations[language] || name} (
+            {independent ? "Independent" : "Not Independent"})
           </h1>
           <div className="flex flex-col gap-10">
             <div className="flex max-md:flex-col gap-10">
