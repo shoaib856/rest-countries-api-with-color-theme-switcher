@@ -15,6 +15,8 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
     subregion,
     topLevelDomain,
     flags,
+    timezones,
+    callingCodes,
   } = country;
 
   return (
@@ -46,14 +48,14 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
         </div>
         <div className="max-sm:px-5 p-2 dark:text-white max-w-lg w-full">
           <h1
-            className={`text-2xl font-bold mb-6 ${
+            className={`text-2xl font-bold mb-10 ${
               language === "fa" ? "text-right" : ""
             }`}
           >
             {country.translations[language] || name}
           </h1>
-          <div className="flex flex-col gap-10 max-md:gap-4">
-            <div className="flex max-md:flex-col gap-4">
+          <div className="flex flex-col gap-10">
+            <div className="flex max-md:flex-col gap-10">
               <div className="flex flex-col gap-4">
                 {[nativeName, population, region, subregion, capital].map(
                   (item, i) => (
@@ -76,10 +78,25 @@ const CountryInDetail = ({ country, setCountry, countries, language }) => {
                 )}
               </div>
               <div className="flex flex-col gap-4">
-                {[topLevelDomain, currencies, languages].map((item, i) => (
+                {[
+                  topLevelDomain,
+                  currencies,
+                  languages,
+                  timezones,
+                  callingCodes,
+                ].map((item, i) => (
                   <p key={i} className="flex gap-1 flex-wrap">
                     <span className={"font-bold"}>
-                      {["Top Level Domain", "Currencies", "Languages"][i]}:
+                      {
+                        [
+                          "Top Level Domain",
+                          "Currencies",
+                          "Languages",
+                          "Timezones",
+                          "Calling Codes",
+                        ][i]
+                      }
+                      :
                     </span>
                     <span>
                       {item instanceof Array
